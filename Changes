@@ -1,4 +1,6 @@
 Revision history for Bio::Tools::Solubility::Wilkinson
 
+0.093341     Mon Nov 30 18:18:19 2009
+ - Fix embarassing POD errors
 0.093340     Mon Nov 30 17:58:55 2009
  - Initial release.

@@ -1,5 +1,5 @@
 Bio::Tools::Solubility::Wilkinson
 =================================
 
-A module to calculate the probability of a protein to be soluble using
-the Wilkinson method.
+Calculate the probability of a protein to be soluble using the
+Wilkinson-Harrison model

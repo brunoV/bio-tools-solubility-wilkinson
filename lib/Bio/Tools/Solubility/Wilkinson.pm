@@ -2,7 +2,8 @@ package Bio::Tools::Solubility::Wilkinson;
 
 # ABSTRACT: Calculate the probability of a protein to be soluble using the Wilkinson-Harrison model
 
-use Modern::Perl;
+use strict;
+use warnings;
 use Sub::Exporter -setup => {
     exports => ['solubility', 'CV'],
     groups  => { default => ['solubility'] },

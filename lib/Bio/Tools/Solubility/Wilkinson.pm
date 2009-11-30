@@ -31,7 +31,7 @@ This function is exported by default.
 =cut
 
 sub solubility {
-    my $protein = shift // die "No protein argument";
+    my $protein = shift or die "No protein argument";
 
     my $CV      = _CV($protein);
     my $CV_norm = abs($CV - CVp);

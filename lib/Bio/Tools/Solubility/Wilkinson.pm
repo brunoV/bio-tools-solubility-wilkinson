@@ -22,7 +22,7 @@ use constant {
 
 Returns the probability of the sequence C<$seq> being soluble. C<$seq>
 should be a correct and validated protein sequence written in one-letter
-aminoacid code with no whitespace or non-residue characters.
+aminoacid code with no whitespace and no non-residue characters.
 
     my $probability = solubility($seq);
 
@@ -109,14 +109,20 @@ you can do:
 This (and other goodies) are possible thanks to L<Sub::Exporter>, which
 is worth checking out.
 
-=postlude References
+=cut
 
-* [1] Wilkinson, D.L. and Harrison, R.G. (1991) BioTechnology 9, 443–448
+=head1 References
+
+=over 4
+
+=item * [1] Wilkinson, D.L. and Harrison, R.G. (1991) BioTechnology 9, 443–448
 L<http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1367308&dopt=Abstract>
 
-* [2] R.G. Harrison. 2000. Expression of soluble heterologous proteins via
+=item * [2] R.G. Harrison. 2000. Expression of soluble heterologous proteins via
 fusion with NusA protein. inNovations. 11:4-7.
 L<http://www.biotech.ou.edu/innovations.pdf>
+
+=back
 
 =cut
 

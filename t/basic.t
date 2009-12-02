@@ -8,7 +8,7 @@ BEGIN {
 }
 
 ok solubility('MAELLKKVIKP'), 'subroutine returns a value';
-dies_ok { solubility() }, '... and dies with no arguments';
+dies_ok { solubility() }  '... and dies with no arguments';
 
 my $prots = read_sequences('DATA');
 

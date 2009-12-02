@@ -1,6 +1,18 @@
 Revision history for Bio::Tools::Solubility::Wilkinson
 
+0.093360     Wed Dec  2 07:54:54 2009
+
+- Handle whitespace-embedded sequences graciously.
+- Use croak() instead of die().
+- Fix POD errors.
+- Improve bibliografical references.
+- Use Test::More + Test::Exception instead of Test::Most.
+- Specify specific versions for Test::More (done_testing()) and constant
+(multiple constant declaration) in dist.ini due to failed tests in some
+platforms.
+
 0.093341     Mon Nov 30 18:18:19 2009
- - Fix embarassing POD errors
+ - Fix embarassing POD errors.
+
 0.093340     Mon Nov 30 17:58:55 2009
  - Initial release.

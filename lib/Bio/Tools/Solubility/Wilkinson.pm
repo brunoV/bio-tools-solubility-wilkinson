@@ -75,7 +75,7 @@ __END__
 
     use Bio::Tools::Solubility::Wilkinson;
 
-    my $seq = 'MMAEELLVIKP...'
+    my $seq = 'MMAEELLVIKP...';
 
     my $s = solubility($seq);
 
@@ -118,11 +118,10 @@ is worth checking out.
 
 =over 4
 
-=item * [1] Wilkinson, D.L. and Harrison, R.G. (1991) BioTechnology 9, 443–448
+=item * [1] Wilkinson, D.L. and Harrison, R.G. (1991) BioTechnology 9, 443-448
 L<http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1367308&dopt=Abstract>
 
-=item * [2] R.G. Harrison. 2000. Expression of soluble heterologous proteins via
-fusion with NusA protein. inNovations. 11:4-7.
+=item * [2] R.G. Harrison. 2000. Expression of soluble heterologous proteins via fusion with NusA protein. inNovations. 11:4-7.
 L<http://www.biotech.ou.edu/innovations.pdf>
 
 =back

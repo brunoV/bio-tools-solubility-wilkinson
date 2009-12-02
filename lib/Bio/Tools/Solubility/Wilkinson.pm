@@ -22,7 +22,8 @@ use constant {
 
 Returns the probability of the sequence C<$seq> being soluble. C<$seq>
 should be a correct and validated protein sequence written in one-letter
-aminoacid code with no whitespace and no non-residue characters.
+aminoacid code. Any whitespace (spaces, newlines, tabs, etc) will be
+ignored.
 
     my $probability = solubility($seq);
 
@@ -32,6 +33,8 @@ This function is exported by default.
 
 sub solubility {
     my $protein = shift or die "No protein argument";
+
+    $protein =~ s/\s+//g;
 
     my $CV      = _CV($protein);
     my $CV_norm = abs($CV - CVp);

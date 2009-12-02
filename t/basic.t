@@ -3,7 +3,9 @@ use Test::Exception;
 use strict;
 use warnings;
 
-use_ok q{ Bio::Tools::Solubility::Wilkinson };
+BEGIN {
+    use_ok q{ Bio::Tools::Solubility::Wilkinson };
+}
 
 ok solubility('MAELLKKVIKP'), 'subroutine returns a value';
 dies_ok { solubility() }, '... and dies with no arguments';

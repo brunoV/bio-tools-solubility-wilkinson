@@ -4,6 +4,8 @@ package Bio::Tools::Solubility::Wilkinson;
 
 use strict;
 use warnings;
+use Carp 'croak';
+
 use Sub::Exporter -setup => {
     exports => ['solubility'],
     groups  => { default => ['solubility'] },
@@ -32,7 +34,7 @@ This function is exported by default.
 =cut
 
 sub solubility {
-    my $protein = shift or die "No protein argument";
+    my $protein = shift or croak "No protein argument";
 
     $protein =~ s/\s+//g;
 

@@ -1,4 +1,5 @@
-use Test::Most;
+use Test::More;
+use Test::Exception;
 use strict;
 use warnings;
 

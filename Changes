@@ -1,4 +1,6 @@
-Revision history for Bio::Tools::Solubility::Wilkinson
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
 
 0.093360     Wed Dec  2 07:54:54 2009
 

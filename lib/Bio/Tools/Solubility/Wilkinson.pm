@@ -89,7 +89,7 @@ This module implements a simple method for the prediction of protein
 solubility, as described by Wilkinson, D.L. and Harrison [1] and
 modified by Davis [2]. It only takes the primary sequence of the protein
 as a parameter, and returns the calculated probability that the protein
-will be expressed in soluble form in E. Coli.
+will be expressed in soluble form in I<E. Coli>.
 
 It uses aminoacid composition to compute the two main parameters found
 to have strong correlation with solubility: charge average and turn
@@ -121,7 +121,7 @@ is worth checking out.
 =over 4
 
 =item * [1] Wilkinson, D.L. and Harrison, R.G. (1991). I<Predicting the
-solubility of recombinant proteins in Escherichia coli> BioTechnology 9,
+solubility of recombinant proteins in Escherichia coli.> BioTechnology 9,
 443-448.
 
 =item * [2] Gregory D. Davis, Claude Elisee, Denton M. Newham, Roger G.

@@ -1,0 +1,75 @@
+NAME
+    Bio::Tools::Solubility::Wilkinson - Calculate the probability of a
+    protein to be soluble using the Wilkinson-Harrison model
+
+VERSION
+    version 0.100890
+
+SYNOPSIS
+        use Bio::Tools::Solubility::Wilkinson;
+
+        my $seq = 'MMAEELLVIKP...';
+
+        my $s = solubility($seq);
+
+DESCRIPTION
+    This module implements a simple method for the prediction of protein
+    solubility, as described by Wilkinson, D.L. and Harrison [1] and
+    modified by Davis [2]. It only takes the primary sequence of the protein
+    as a parameter, and returns the calculated probability that the protein
+    will be expressed in soluble form in *E. Coli*.
+
+    It uses aminoacid composition to compute the two main parameters found
+    to have strong correlation with solubility: charge average and turn
+    forming residue fraction. For a detailed description of the formula
+    used, check the article by Harrison [3] in the References section.
+
+METHODS
+  solubility
+    Returns the probability of the sequence $seq being soluble. $seq should
+    be a correct and validated protein sequence written in one-letter
+    aminoacid code. Any whitespace (spaces, newlines, tabs, etc) will be
+    ignored.
+
+        my $probability = solubility($seq);
+
+    This function is exported by default.
+
+Customize your imports
+    If you'd like to rename the only imported subroutine for some reason,
+    you can do:
+
+        use Bio::Tools::Solubility::Wilkinson
+            solubility => { -as => 'solubility_wilkinson' };
+
+        use Some::Other::Solubility::Module 'solubility_foo';
+
+        my $p1 = solubility_wilkinson($seq);
+        my $p2 = solubility_foo($seq);
+
+    This (and other goodies) are possible thanks to Sub::Exporter, which is
+    worth checking out.
+
+References
+    *   [1] Wilkinson, D.L. and Harrison, R.G. (1991). *Predicting the
+        solubility of recombinant proteins in Escherichia coli.*
+        BioTechnology 9, 443-448.
+
+    *   [2] Gregory D. Davis, Claude Elisee, Denton M. Newham, Roger G.
+        Harrison (1999). *New fusion protein systems designed to give
+        soluble expression in Escherichia coli*. Biotechnology and
+        Bioengineering Volume 65 Issue 4, Pages 382 - 388
+
+    *   [3] R.G. Harrison. 2000. *Expression of soluble heterologous
+        proteins via fusion with NusA protein*. inNovations. 11:4-7.
+        <http://www.biotech.ou.edu/innovations.pdf>
+
+AUTHOR
+      Bruno Vecchi <vecchi.b gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Bruno Vecchi.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
